@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="WMZ_ReviewReminder::menu"
+             title="Review Reminders"
+             module="WMZ_ReviewReminder"
+             sortOrder="20"
+             parent="WMZ_Core::wmz"
+             resource="WMZ_ReviewReminder::menu"
+        />
+        <add id="WMZ_ReviewReminder::grid"
+             title="Review Reminder"
+             module="WMZ_ReviewReminder"
+             sortOrder="20"
+             action="review_reminder/index/index"
+             parent="WMZ_ReviewReminder::menu"
+             resource="WMZ_ReviewReminder::gird"
+        />
+        <add id="WMZ_ReviewReminder::configuration"
+             title="Configuration"
+             module="WMZ_ReviewReminder"
+             sortOrder="20"
+             action="adminhtml/system_config/edit/section/review_reminder"
+             parent="WMZ_ReviewReminder::menu"
+             resource="WMZ_ReviewReminder::menu"
+        />
+    </menu>
+</config>
